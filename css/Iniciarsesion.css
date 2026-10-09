@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor {
+  width: 100%;
+  max-width: 950px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 42% 58%;
+
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================
+   PRESENTACIÓN
+========================= */
+
+.presentacion {
+  background: linear-gradient(110deg, #2d0a4e, #5c00a8, #7600D3);
+
+  color: #ffffff;
+
+  padding: 50px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.logo span {
+  color: white;
+}
+
+
+.logo i {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: white;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ICONO GRANDE */
+
+.icono-grande {
+  font-size: 65px;
+
+  margin-bottom: 20px;
+}
+
+.icono-grande i {
+  display: inline-block;
+}
+
+/* TÍTULO */
+
+.presentacion h1 {
+  font-size: 34px;
+  line-height: 1.2;
+
+  margin-bottom: 18px;
+}
+
+/* DESCRIPCIÓN */
+
+.presentacion p {
+  color: #dbeafe;
+
+  line-height: 1.6;
+
+  font-size: 15px;
+}
+
+/* VENTAJAS */
+
+.ventajas {
+  list-style: none;
+
+  margin-top: 30px;
+}
+
+.ventajas li {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario {
+  padding: 55px 50px;
+
+  background: #ffffff;
+}
+
+.formulario h2 {
+  font-size: 29px;
+
+  color: #1e293b;
+
+  margin-bottom: 8px;
+}
+
+.descripcion {
+  color: #64748b;
+
+  font-size: 14px;
+
+  margin-bottom: 32px;
+}
+
+/* =========================
+   CAMPOS
+========================= */
+
+.campo {
+  margin-bottom: 22px;
+}
+
+.campo label {
+  display: block;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  color: #334155;
+
+  margin-bottom: 8px;
+}
+
+/* CONTENEDOR DEL INPUT */
+
+.input-icono {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ICONO DEL INPUT */
+
+.input-icono > i {
+  position: absolute;
+
+  left: 14px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  pointer-events: none;
+}
+
+/* INPUT */
+
+.input-icono input {
+  width: 100%;
+
+  padding: 13px 45px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+  color: #1e293b;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+/* INPUT FOCUS */
+
+.input-icono input:focus {
+  border-color: #7600D3;
+
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+/* =========================
+   MOSTRAR CONTRASEÑA
+========================= */
+
+.mostrar-password {
+  position: absolute;
+
+  right: 12px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  z-index: 2;
+}
+
+.mostrar-password:hover {
+  color: #7600D3;
+}
+
+/* =========================
+   OPCIONES
+========================= */
+
+.opciones {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  font-size: 12px;
+}
+
+.recordar {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.recordar input {
+  accent-color: #7600D3;
+
+  cursor: pointer;
+}
+
+.opciones a {
+  color: #7600D3;
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.opciones a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.boton {
+  width: 100%;
+
+  border: none;
+
+  background: #7600D3;
+
+  color: #ffffff;
+
+  padding: 14px;
+
+  border-radius: 9px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.boton:hover {
+  background: #5c00a8;
+
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+.boton:active {
+  transform: translateY(1px);
+}
+
+/* =========================
+   REGISTRO
+========================= */
+
+.registro {
+  text-align: center;
+
+  margin-top: 22px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.registro a {
+  color: #7600D3;
+
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.registro a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .presentacion {
+    padding: 35px;
+  }
+
+  .ventajas {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 15px;
+  }
+
+  .formulario {
+    padding: 35px 22px;
+  }
+
+  .opciones {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

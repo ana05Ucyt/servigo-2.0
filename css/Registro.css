@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.presentacion {
+  background: linear-gradient(145deg, #2d0a4e, #4a0080, #7600D3);
+
+  color: white;
+  padding: 50px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+.logo span {
+  color: white;
+}
+
+i {
+  font-size: 2.5rem;
+  margin-inline: 0.3125rem;
+  margin-bottom: 5px;
+  color: white;
+  animation: float 4s ease-in-out infinite;
+}
+
+.icono-grande {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.presentacion h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.presentacion p {
+  color: #f0dcff;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.ventajas {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.ventajas li {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.formulario {
+  padding: 45px 50px;
+}
+
+.formulario h2 {
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.descripcion {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.tipos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.tipo input {
+  display: none;
+}
+
+.tipo label {
+  display: block;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.tipo label:hover {
+  border-color: #c084fc;
+}
+
+.tipo input:checked + label {
+  border-color: #7600D3;
+  background: #faf5ff;
+  color: #7600D3;
+}
+
+.tipo-icono {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+
+.tipo-nombre {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #334155;
+  margin-bottom: 7px;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: #7600D3;
+  box-shadow: 0 0 0 3px #f0dcff;
+}
+
+.campo textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  background: white;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.campo textarea:focus {
+  border-color: #7600D3;
+  box-shadow: 0 0 0 3px #f0dcff;
+}
+
+.datos-tecnico {
+  display: none;
+}
+
+.datos-tecnico.activo {
+  display: block;
+}
+
+.nota {
+  background: #faf5ff;
+  border-left: 4px solid #7600D3;
+  padding: 12px;
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.boton {
+  width: 100%;
+  border: none;
+  background: #7600D3;
+  color: white;
+  padding: 14px;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.boton:hover {
+  background: #5c00a8;
+}
+
+.login {
+  text-align: center;
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.login a {
+  color: #7600D3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .presentacion {
+    padding: 35px;
+  }
+
+  .logo {
+    margin-bottom: 25px;
+  }
+
+  .presentacion h1 {
+    font-size: 28px;
+  }
+
+  .ventajas {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 15px;
+  }
+
+  .formulario {
+    padding: 30px 22px;
+  }
+
+  .fila {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .tipos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
